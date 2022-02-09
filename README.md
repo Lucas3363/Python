@@ -1,2 +1,3 @@
-# Python-Fatec-2-semestre
-Python Fatec 2º semestre
+## Python-Fatec-2-semestre
+
+Neste repositório contém minhas atividades de desenvolvimento em Python.
