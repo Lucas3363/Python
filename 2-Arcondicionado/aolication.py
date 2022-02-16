@@ -5,6 +5,7 @@ temperatura = arcondicionado.Temperatura()
 opc=0
 
 while opc != 9:
+
     tempatual = temperatura.get_Temperatura()
     print(f"Temperatura atual: {tempatual}")
 
