@@ -9,7 +9,7 @@ lista = listinha.Listinha(tamanho)
 
 opc=5
 while opc != 9:
-    opc=int(input("1-insere 2-remove 3-exibe lista 9-fim \nSelecione:"))
+    opc=int(input("\n1-insere 2-remove 3-exibe lista 9-fim \nSelecione:"))
     if opc == 1:
 
         if lista.listaCheia():
@@ -17,8 +17,10 @@ while opc != 9:
         else:
             base = int(input("Digite a base:"))
             altura = int(input("Digite a altura:"))
-            lado3 = int(input("Digite o lado 3: "))
-            x=triangulo.Triangulo(base,altura,lado3)
+            ladoA = int(input("Digite o lado A: "))
+            ladoB = int(input("Digite o lado B: "))
+            ladoC = int(input("Digite o lado C: "))
+            x=triangulo.Triangulo(base,altura,ladoA,ladoB,ladoC)
             lista.insere(x)
             print("inserção com sucesso!!!")
 
@@ -35,10 +37,11 @@ while opc != 9:
         else:
             for i in range(lista.getTamanhoAtual()):
                 x=lista.getValor(i)
-                print("Base:",x.getBase())
-                print("Altura: ",x.getAltura())
-                print("Lado 3: ",x.getC())
-                print("Area:",x.getArea())
+                print("\nDados do triangulo")
+                print("\nLado A: ",x.getA())
+                print("Lado B: ",x.getB())
+                print("Lado C: ",x.getC())
+                print("\nArea:",x.getArea())
                 print("Perimetro:",x.getPerimetro())
 
     elif opc == 9:
