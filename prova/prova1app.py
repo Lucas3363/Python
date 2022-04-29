@@ -1,11 +1,11 @@
-import classefila
+import prova1
 
 tamanho = int(input("Digite o tamanho da fila: "))
-f=classefila.Fila(tamanho)
+f=prova1.Fila(tamanho)
 
 opc=1
 while opc != 9:
-    opc = int(input("\n1 - Empilha  2 - Desempilha  3 - primeiro item da fila  4 - Exibe fila  5-empilha(remove()) 6-insere(desempilha()) \nSelecione: "))
+    opc = int(input("\n1 - Empilha  2 - Desempilha  3 - primeiro item da fila  4 - Exibe fila 5 - insere(remove()) 6 - insere(primeiro()) \nSelecione: "))
     if opc == 1:
         if f.filaCheia():
             print("Fila cheia!")
@@ -32,20 +32,14 @@ while opc != 9:
             print("Fila vazia!")
         else:
             print("Exibindo fila:", f.getFila())
-    
+
     elif opc == 5:
-        if f.filaVazia():
-            print("Pilha vazia....")
-        else:
-            f.insere(f.remove())
-            print("Desempilhado")
+            f.insere(remover())
+            print("insere(remove())")
 
     elif opc == 6:
-        if f.filaVazia():
-            print("Pilha vazia....")
-        else:
-            f.insere(f.primeiro())
-            print("Sucesso")
+            f.insere(primeiros())
+            print("insere(primeiro())")
         
     elif opc == 9:
         print("Fim!")

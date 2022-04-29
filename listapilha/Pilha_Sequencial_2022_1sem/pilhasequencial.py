@@ -11,6 +11,12 @@ class Pilha:
     def desempilha(self):
         self.pilha.pop()
 
+    def insere(self, x):
+        self.pilha.append(x)
+
+    def remove(self):
+        self.pilha.pop()
+
     def elementodotopo(self):
         return self.pilha[len(self.pilha)-1]
 
@@ -20,7 +26,7 @@ class Pilha:
     def pilhacheia(self):
         return len(self.pilha) == self.tamanho
 
-    def getValor(posicao):
+    def getValor(self, posicao):
         return self.pilha[posicao]
 
     def getPilha(self):

@@ -5,7 +5,7 @@ p=pilhasequencial.Pilha(tamanho)
 
 opc=1
 while(opc != 9):
-    opc=int(input("1-empilha 2-desempilha 3-topo 4-exibe Selecine:"))
+    opc=int(input("1-empilha 2-desempilha 3-topo 4-exibe 5-empilha(remove()) 6-insere(desempilha()) Selecine:"))
     if opc==1:
         if p.pilhacheia():
             print("Pilha cheia!!")
@@ -32,6 +32,18 @@ while(opc != 9):
             for e in p.getPilha():
                 print(e, end=" ")
             print()
+    elif opc == 5:
+        if p.pilhavazia():
+            print("Pilha vazia....")
+        else:
+            p.empilha(p.remove())
+            print("Desempilhado")
+    elif opc == 6:
+        if p.pilhavazia():
+            print("Pilha vazia....")
+        else:
+            p.empilha(p.remove())
+            print("Sucesso")
     elif opc == 9:
         print("fim....")
     else:
